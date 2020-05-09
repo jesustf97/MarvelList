@@ -1,6 +1,4 @@
-# MarvelList
-Native iOS app that displays a list of Marvel characters and the details of each one. 
+# H1 MarvelList
 
-The data displayed in the app are obtained dynamically from the official marvel API.
 
 ![](marvel-list.gif)
