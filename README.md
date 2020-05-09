@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-**Alamofire:** Management of web requests to the api.
+**Alamofire:**  Management of web requests to the api.
 
 ## Set Up
 
