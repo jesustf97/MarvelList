@@ -4,7 +4,7 @@
 
 **Alamofire:**  Management of web requests to the api.
 
-## Set Up
+## Setup
 
 Clone the project and install the necessary dependencies by entering the following commands in your terminal
 
