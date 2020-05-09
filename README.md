@@ -3,4 +3,5 @@ Native iOS app that displays a list of Marvel characters and the details of each
 
 The data displayed in the app are obtained dynamically from the official marvel API.
 
+
 ![](marvel-list-giphy.gif)
