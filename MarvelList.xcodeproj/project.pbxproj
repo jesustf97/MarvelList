@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192538F824E343A5008CBDD1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192538F724E343A5008CBDD1 /* Messages.swift */; };
 		1955D4422461D4AA00055D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1955D4412461D4AA00055D1A /* AppDelegate.swift */; };
 		1955D4442461D4AA00055D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1955D4432461D4AA00055D1A /* SceneDelegate.swift */; };
 		1955D4492461D4AA00055D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1955D4472461D4AA00055D1A /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192538F724E343A5008CBDD1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		1955D43E2461D4AA00055D1A /* Marvel List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1955D4412461D4AA00055D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1955D4432461D4AA00055D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				1955D4562461D5A500055D1A /* Constants.swift */,
 				1955D4582461D5B500055D1A /* Utilities.swift */,
 				1955D45A2461D5CB00055D1A /* Errors.swift */,
+				192538F724E343A5008CBDD1 /* Messages.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1955D4422461D4AA00055D1A /* AppDelegate.swift in Sources */,
+				192538F824E343A5008CBDD1 /* Messages.swift in Sources */,
 				1955D4602461D68800055D1A /* CharacterViewCell.swift in Sources */,
 				1955D4442461D4AA00055D1A /* SceneDelegate.swift in Sources */,
 				1955D46B2461D7A600055D1A /* Response.swift in Sources */,

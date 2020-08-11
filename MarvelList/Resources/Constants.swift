@@ -14,9 +14,8 @@ struct Constants {
     static let hash = "hash"
     static let timeStamp = "ts"
     static let limit = "limit"
+    static let offset = "offset"
     static let characterCellIdentifier = "CharacterCell"
     static let comicCellIdentifier = "ComicCell"
-    static let maxLimitgetCharactersRequest = 100
-    static let actionAccept = "ACCEPT"
-    
+    static let maxLimitCharactersRequest = 100
 }

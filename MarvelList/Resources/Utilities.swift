@@ -34,7 +34,7 @@ extension UIViewController {
             return digestData
         }
 
-    func getRequestParams(limit: Int?) -> [String: Any] {
+    func getRequestParams(limit: Int = 1, offset: Int = 0) -> [String: Any] {
         let ts = "\(Date().timeIntervalSince1970)"
         let input = "\(ts)\(Constants.marvelApiPrivateKeyValue)\(Constants.marvelApiPublicKeyValue)"
         
@@ -44,7 +44,8 @@ extension UIViewController {
             [Constants.marvelApiPublicKey: Constants.marvelApiPublicKeyValue,
              Constants.timeStamp: ts,
              Constants.hash: hash,
-             Constants.limit: limit
+             Constants.limit: limit,
+             Constants.offset: offset
         ]
     }
     
@@ -94,7 +95,7 @@ func getUrl(image: Image) -> String{
 
 func showDialog(title: String, message: String){
     let alert = UIAlertController(title: title , message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: Constants.actionAccept, style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: Messages.actionAccept, style: UIAlertAction.Style.default, handler: nil))
            DispatchQueue.main.async {
         self.present(alert, animated: true, completion: nil)
     }

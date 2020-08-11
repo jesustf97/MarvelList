@@ -7,10 +7,12 @@
 //
 
 struct CharactersInfo: Decodable {
-  let charactersInfo: [CharacterInfo]
+    let charactersInfo: [CharacterInfo]
+    let totalCharacters: Int
   
   enum CodingKeys: String, CodingKey {
     case charactersInfo = "results"
+    case totalCharacters = "total"
   }
 }
 
