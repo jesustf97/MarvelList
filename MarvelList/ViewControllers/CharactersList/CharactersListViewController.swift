@@ -13,7 +13,9 @@ class CharactersListViewController: UIViewController {
     
     @IBOutlet weak var navController: UINavigationItem!
     @IBOutlet weak var characterTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     var characters: [CharacterInfo] = []
+    var filteredCharacters: [CharacterInfo] = []
     var selectedItem: CharacterInfo?
     
     override func viewDidLoad() {
@@ -45,6 +47,8 @@ class CharactersListViewController: UIViewController {
                 return
             }
             self.characters.append(contentsOf: apiCharactersResponse.charactersInfo)
+            self.filteredCharacters = self.characters
+            
             if(self.characters.count == totalCharacters){
                 self.characterTableView.reloadData()
                 self.dismiss(animated: true, completion: nil)
@@ -62,23 +66,37 @@ class CharactersListViewController: UIViewController {
     }
 }
 
-extension CharactersListViewController: UITableViewDataSource, UITableViewDelegate {
+extension CharactersListViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characters.count
+        return filteredCharacters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let character = characters[indexPath.row]
+        let character = filteredCharacters[indexPath.row]
          let cell = tableView.dequeueReusableCell(withIdentifier: Constants.characterCellIdentifier) as! CharacterViewCell
         cell.setName(name: character.name)
          return cell
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        selectedItem = characters[indexPath.row]
+        selectedItem = filteredCharacters[indexPath.row]
         return indexPath
     }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        
+        guard !(searchText.isEmpty) else {
+            filteredCharacters = characters
+            characterTableView.reloadData()
+            return
+        }
+        
+        filteredCharacters = characters.filter({ character -> Bool in
+            return character.name.lowercased().contains(searchText.lowercased())
+        })
+        characterTableView.reloadData()
+     }
 }
 
 
