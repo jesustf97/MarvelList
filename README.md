@@ -13,4 +13,4 @@ Clone the project and install the necessary dependencies by entering the followi
 -> *pod install*
 
 
-![](marvel-list.gif)
+![](marvel_list.gif)
