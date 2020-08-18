@@ -14,7 +14,7 @@ struct Messages {
     static let actionAccept = "Accept"
     
     //Onboarding
-    static let onboarding_text_first = "Bienvenido a Daily Hero! \nNos emociona tenerte aquí, es hora de impulsar tu vida! \nCada día una frase, una reflexión y un libro recomendado sobre crecimiento personal, motivación y mucho más!"
-    static let onboarding_text_second = "Sé menos curioso por las personas y más por las ideas \n\n ~Marie Curie"
-    static let onboarding_text_third = "Puedes guardar tus frases y reflexiones favoritas y acceder a ellas en el momento que más las necesites!"
+    static let onboarding_text_first = "Welcome to the Marvel universe!\n\nWith the Marvel List app you have access to all your favorite characters available on the Marvel network."
+    static let onboarding_text_second = "Filter and find characters by name using the search bar"
+    static let onboarding_text_third = "Check the detail of the character to know his history and which Marvel comics he takes part"
 }
