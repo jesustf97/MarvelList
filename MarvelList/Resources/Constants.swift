@@ -27,6 +27,7 @@ struct Constants {
     static let onboardingIdFirst = "onboardingIdFirst"
     static let onboardingIdSecond = "onboardingIdSecond"
     static let onboardingIdThird = "onboardingIdThird"
+    static let onboardingFlag = "onboardingFlagUserPreferences"
     
     //Segue ids
     static let goToChatacterListSegueId = "goToChatacterList"

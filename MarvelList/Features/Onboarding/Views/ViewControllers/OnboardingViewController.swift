@@ -26,12 +26,31 @@ class OnboardingViewController: UIViewController {
         self.configureUI()
     }
     
+    override func viewDidLayoutSubviews() {
+        self.checkUserPreferences()
+    }
+    
+    private func checkUserPreferences(){
+
+        guard let isUser = preferences.object(forKey: Constants.onboardingFlag) as? Bool else {
+            return
+        }
+        
+        if(isUser) {
+            goToMain(self)
+        }
+    }
+    
+    private func disableOnboarding(){
+        preferences.set(true, forKey: Constants.onboardingFlag)
+    }
+    
     private func configureUI(){
+        createGradient()
         titleLabel.text = titleText
         animationView.animation = Animation.named(animationName ?? "hero")
         animationView.loopMode = .loop
         animationView.backgroundBehavior = .pauseAndRestore
-        createGradient()
         UIViewController.styleFilledButton(self.startButton)
     }
     
@@ -45,6 +64,7 @@ class OnboardingViewController: UIViewController {
     }
 
     @IBAction func goToMain(_ sender: Any) {
+            self.disableOnboarding()
              performSegue(withIdentifier: Constants.goToChatacterListSegueId, sender: self)
     }
     override func viewWillAppear(_ animated: Bool) {
