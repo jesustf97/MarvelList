@@ -7,6 +7,8 @@
 //
 
 struct Constants {
+    
+    //Api Service
     static let getCharactersUrl = "https://gateway.marvel.com/v1/public/characters"
     static let marvelApiPublicKey = "apikey"
     static let marvelApiPublicKeyValue = "b0fb99a5f7be5649f456e2d005100a0f"
@@ -15,7 +17,22 @@ struct Constants {
     static let timeStamp = "ts"
     static let limit = "limit"
     static let offset = "offset"
+    static let maxLimitCharactersRequest = 100
+    
+    //Cells ids
     static let characterCellIdentifier = "CharacterCell"
     static let comicCellIdentifier = "ComicCell"
-    static let maxLimitCharactersRequest = 100
+    
+    //Onboarding
+    static let onboardingIdFirst = "onboardingIdFirst"
+    static let onboardingIdSecond = "onboardingIdSecond"
+    static let onboardingIdThird = "onboardingIdThird"
+    
+    //Segue ids
+    static let goToChatacterListSegueId = "goToChatacterList"
+    
+    
+    
+    
+    
 }

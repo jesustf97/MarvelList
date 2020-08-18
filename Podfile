@@ -7,6 +7,7 @@ target 'MarvelList' do
 
   	# Pods for MarvelList
 
+  pod 'lottie-ios'
 	pod 'Alamofire', '~> 5.1'
 
 end

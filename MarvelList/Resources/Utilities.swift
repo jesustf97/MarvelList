@@ -93,13 +93,27 @@ func getUrl(image: Image) -> String{
     return image.path + "." + image.format
 }
 
-func showDialog(title: String, message: String){
+    func showDialog(title: String, message: String, dismissAfter: Bool = false){
     let alert = UIAlertController(title: title , message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: Messages.actionAccept, style: UIAlertAction.Style.default, handler: nil))
            DispatchQueue.main.async {
-        self.present(alert, animated: true, completion: nil)
+            self.present(alert, animated: true) {
+                if(dismissAfter){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                           guard self?.presentedViewController == alert else { return }
+
+                           self?.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
     }
 }
+    
+static func styleFilledButton(_ button:UIButton) {
+    button.backgroundColor = UIColor.white
+    button.layer.cornerRadius = 20.0
+    button.tintColor = UIColor.white
+    }
 
 }
 
