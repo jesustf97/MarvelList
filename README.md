@@ -2,9 +2,9 @@
 
 ## Dependencies
 
-**Alamofire:**  Management of web requests to the api. (https://github.com/Alamofire/Alamofire)
+**Alamofire:** Management of web requests to the api. (https://github.com/Alamofire/Alamofire)
 
-**Lotties-ios:**  loads and renders animations and vectors exported in the bodymovin JSON format. (https://github.com/airbnb/lottie-ios)
+**Lotties-ios:** Loads and renders animations and vectors exported in the bodymovin JSON format. (https://github.com/airbnb/lottie-ios)
 
 ## Setup
 
